@@ -1,0 +1,433 @@
+[00:00] hey my name is Paul and today I'm going
+
+[00:01] to show you how to use hidden apis via
+
+[00:03] nadn to get free YouTube transcripts
+
+[00:05] let's get right into it so step number
+
+[00:07] one is going to be to go ahead and sign
+
+[00:09] up for an NN account if you don't have
+
+[00:11] one already you can do this exact
+
+[00:13] process VI make.com as well I'm just
+
+[00:15] using Ann and this example and I'm going
+
+[00:17] to go ahead and create a new workflow
+
+[00:19] and make that OB be a
+
+[00:21] scenario and I'm just going to add our
+
+[00:23] trigger which is going to be trigger
+
+[00:25] manually and then for this example uh
+
+[00:28] I'm going to use com AI YouTube
+
+[00:31] transcripts generator just so we can
+
+[00:34] demonstrate this but you can do this for
+
+[00:36] many different things and many different
+
+[00:37] softwares so it doesn't necessarily have
+
+[00:39] to be com and YouTube transcripts it can
+
+[00:41] be a whole host of different things but
+
+[00:43] the concept is what's important and the
+
+[00:45] skill of knowing how to do this so I'm
+
+[00:48] going to go ahead and click on comei
+
+[00:49] YouTube transcript generator you can see
+
+[00:51] free and fast and if I go to my
+
+[00:56] YouTube I'm going to go to your Channel
+
+[01:00] and then I'm going grab my most video
+
+[01:03] backspace this copy this and then paste
+
+[01:06] it in my YouTube Ur all and generate it
+
+[01:08] you can see we have our full transcript
+
+[01:10] from the video in seconds and it's free
+
+[01:13] but what we want to do is uh imagine if
+
+[01:15] you just used an appify scraper to
+
+[01:17] scrape a YouTube profile and there's
+
+[01:18] like 100 plus videos right and then you
+
+[01:21] want to get all the transcripts back
+
+[01:23] from that specific Channel and then
+
+[01:25] repurpose the transcripts into a tweet
+
+[01:28] to promote it via on your Channel
+
+[01:29] Channel or repurpose somebody else's
+
+[01:31] videos transcripts into your own tweets
+
+[01:34] or maybe a blog post or something the
+
+[01:36] the possibilities with this are
+
+[01:37] literally endless and that's exactly I'm
+
+[01:39] going to show you because you don't want
+
+[01:39] to be like oh okay video copy boom put
+
+[01:42] it over here then drag it do Google doc
+
+[01:44] then go over to chat gbt like that's why
+
+[01:46] we have automation so what we're going
+
+[01:48] to do is right click and bring up the
+
+[01:50] developer tools with inspect I'm going
+
+[01:52] to refresh this
+
+[01:54] page and then paste in the same YouTube
+
+[01:56] all and then click on generate and you
+
+[02:00] can see we have this uh status 2001 X
+
+[02:03] xhr type and then I'm going to go to it
+
+[02:07] and you can see we have a request URL
+
+[02:09] with a post we got 200 back so it means
+
+[02:11] it worked and then if I go over to
+
+[02:13] response you can see in Json or
+
+[02:16] JavaScript object and notation we have
+
+[02:19] the the transcript just like we want it
+
+[02:20] if I go to payload we have a Json
+
+[02:22] payload so if you've ever done an hgp
+
+[02:25] requests with make or NAD you're going
+
+[02:27] to know that we need a request youur all
+
+[02:28] we need a method and then we need to
+
+[02:30] payload sometimes we need headers like
+
+[02:32] authentication or cookies and stuff like
+
+[02:34] that but in this example you actually
+
+[02:35] don't so what we're going to do is come
+
+[02:38] over to naden add an HTTP node it's
+
+[02:41] going to be HTTP request and then if I
+
+[02:44] come over here you can see the request
+
+[02:45] method is post so I'm going to change
+
+[02:49] the method to
+
+[02:50] post and then I'm going to copy this
+
+[02:52] request you
+
+[02:54] all paste it in here and going turn on
+
+[02:57] send body and change this specific body
+
+[02:59] to using Json and then if I go to
+
+[03:01] payload I'm going to copy this actually
+
+[03:04] uh copy this and come over to chat gbt
+
+[03:07] and just tell it format Json boom and
+
+[03:11] then we're going to copy what it gives
+
+[03:12] us boom and then I'm just going to paste
+
+[03:16] this in and this is actually good to go
+
+[03:18] so if I go ahead and click on test
+
+[03:20] step what we should get is our
+
+[03:22] transcript back yes so we get our
+
+[03:24] transcript back uh and what we can do is
+
+[03:27] I'm going to set up a Google sheet and
+
+[03:28] we're just going to iterate through a
+
+[03:30] couple different videos and then save
+
+[03:31] their transcripts next to them so I'm
+
+[03:34] going to go to this account because I
+
+[03:35] have this one linked and then go to
+
+[03:38] Google Sheets create a blank
+
+[03:40] spreadsheet I'm going to say channels to
+
+[03:44] or videos to
+
+[03:48] transcribe and then I'm going to add a
+
+[03:50] URL header and then I'm going to add a
+
+[03:53] transcript
+
+[03:55] header I I spelled the whole thing so
+
+[03:58] transcript Andora hter so we're going to
+
+[04:00] have our URL here and then we'll have
+
+[04:01] our transcripts here so it's going to
+
+[04:03] search through these different URLs and
+
+[04:04] then put their transcripts right here
+
+[04:06] all for free so I'm going to just bold
+
+[04:09] these headers make them a little bit
+
+[04:10] bigger and then I'm going to plug in a
+
+[04:12] couple of my YouTube videos so we'll
+
+[04:14] copy this most recent
+
+[04:17] one we'll go to this one this one and
+
+[04:20] this one what's going on guys my name I
+
+[04:22] think four is enough to just demonstrate
+
+[04:24] it and and how fast it's going to be as
+
+[04:26] well um the fact what's going on guys my
+
+[04:28] name really cool so boom uh let's make
+
+[04:32] sure there's no duplicates here yeah
+
+[04:34] we're good guys
+
+[04:37] okay boom all right so this is all good
+
+[04:40] to go we have four different videos and
+
+[04:41] then we'll have four different
+
+[04:42] transcripts for each of or for them so
+
+[04:45] I'm going to close these
+
+[04:47] windows and then instead of hard coding
+
+[04:49] this we're going to actually want the
+
+[04:50] variable for the URL so I'm going to
+
+[04:52] delete this connection add a node I'm
+
+[04:54] going to search for Google
+
+[04:56] Sheets it's going to be actually get row
+
+[04:59] which is basic the search row module and
+
+[05:01] make and I'm going to choose a document
+
+[05:04] videos to transcribe I didn't rename the
+
+[05:05] sheet so it's going to be by default
+
+[05:07] sheet one if I go and click on test
+
+[05:11] step what we get back is the different
+
+[05:13] URLs and you can see the transcript is
+
+[05:15] empty right now that's what we want to
+
+[05:16] change but we have the different URLs
+
+[05:17] and we can dynamically access them with
+
+[05:19] this URL uh variable so I'm going to
+
+[05:22] connect this to the HTTP request node
+
+[05:24] I'll rename
+
+[05:26] this uh get transcripts
+
+[05:31] okay so I'm going to say list videos
+
+[05:35] this one and we're going to add another
+
+[05:36] Google Sheets module after this but
+
+[05:38] first we have to set this one up so I'm
+
+[05:41] going to change this from Simply card
+
+[05:43] coding the URL to grabbing this URL from
+
+[05:46] the list videos you'll probably need to
+
+[05:48] run this one so that it's populated and
+
+[05:50] then I'm just going to move this up here
+
+[05:51] too in between these quotations for the
+
+[05:53] video ID and let's go ahead and try
+
+[05:56] testing this step so test step
+
+[06:00] and we get the transcrip back so this is
+
+[06:02] successfully executed it actually got us
+
+[06:03] back all of our different ones but
+
+[06:05] that's fine so I'm going to close this
+
+[06:07] add another add another module and I'm
+
+[06:10] going to search for Google Sheets again
+
+[06:11] we're actually going to add these
+
+[06:13] transcripts to the Google sheet so right
+
+[06:17] here we have URL we want the transcript
+
+[06:18] right here so it's going to be a pend or
+
+[06:21] update a row in a sheet I'm going to say
+
+[06:24] update row I'm going to choose this
+
+[06:27] sheet is going to be sheet one
+
+[06:30] it's going to fetch these columns and
+
+[06:31] I'm going to match it on URL and then
+
+[06:34] feed in this URL boom and then the
+
+[06:38] transcript is is just going to be this
+
+[06:39] transcript from the get transcripts
+
+[06:41] module if we go and test
+
+[06:47] step okay if I go to here we have
+
+[06:49] successfully mapped in the transcripts
+
+[06:51] for all of the videos so I'm just going
+
+[06:53] to delete these for now and we're going
+
+[06:55] to run it live so I'm going to exit this
+
+[06:57] out end to end I'm going to save it I'm
+
+[07:00] going to call
+
+[07:01] this
+
+[07:03] uh
+
+[07:04] free
+
+[07:07] transcripts transcripts boom and it's
+
+[07:11] saved if I go a and click on test
+
+[07:14] workflow we're going to wait here and in
+
+[07:16] just a second we're going to have all
+
+[07:17] the transcripts
+
+[07:19] back so boom boom boom boom boom okay
+
+[07:22] this is this is good so I think in the
+
+[07:24] future what I'm going to do this may
+
+[07:25] actually be my next video uh I'm going
+
+[07:27] to show you how to scrape through a list
+
+[07:29] list of different YouTube channels get
+
+[07:31] the videos and then scrape the videos
+
+[07:33] and then get the transcripts as well as
+
+[07:35] repurpose them into the tweets because I
+
+[07:36] think that could be an absolutely mental
+
+[07:38] system but this is just like stage one
+
+[07:40] how to get the transcripts back into a
+
+[07:42] Google sheet hey if you enjoyed the
+
+[07:43] video please make sure to drop me a like
+
+[07:44] And subscribe as it really helps my
+
+[07:46] Channel all the templates as well as
+
+[07:48] live masterclass calls q&as and full
+
+[07:50] courses on me.com and will be down in
+
+[07:53] the description at my school Community
+
+[07:55] besides that everybody have a great day
+
+[07:56] and peace
+
+[07:58] out o
+
+[08:04] [Applause]
